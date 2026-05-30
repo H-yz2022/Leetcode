@@ -8,7 +8,7 @@
 ###Dynamic Programming
 | # | Note | Question | Link | Difficulcty |
 |------|------|------|------|------|
-| 1 | C++ Fibonacci style| [70. Climbing Stairs](https://leetcode.com/problems/climbing-stairs/description/?envType=study-plan-v2&envId=dynamic-programming) | row1 |  |
+| 1 | C++ Fibonacci style| [70. Climbing Stairs](https://leetcode.com/problems/climbing-stairs/description/?envType=study-plan-v2&envId=dynamic-programming) | [link](https://github.com/H-yz2022/Leetcode/blob/main/src/70.%20Climbing%20Stairs.cpp) |  |
 | 2 | C++ | row2 | row2 |row2 |
 
 # HackerRank
