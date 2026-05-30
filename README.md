@@ -1,6 +1,6 @@
 # Leetcode
 
-| Name | Note | Question | Link | Difficulcty |
+| # | Note | Question | Link | Difficulcty |
 |------|------|------|------|------|
 | row1 | row1 | row1 | row1 |row1 |
 | row2 | row2 | row2 | row2 |row2 |
