@@ -1,9 +1,15 @@
 # Leetcode
-
+###SQL
 | # | Note | Question | Link | Difficulcty |
 |------|------|------|------|------|
 | 1 | SQL | row1 | row1 |row1 |
 | 2 | SQL | row2 | row2 |row2 |
+
+###Dynamic Programming
+| # | Note | Question | Link | Difficulcty |
+|------|------|------|------|------|
+| 1 | C++ Fibonacci style| [70. Climbing Stairs](https://leetcode.com/problems/climbing-stairs/description/?envType=study-plan-v2&envId=dynamic-programming) | row1 |  |
+| 2 | C++ | row2 | row2 |row2 |
 
 # HackerRank
 
