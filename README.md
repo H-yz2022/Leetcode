@@ -9,5 +9,5 @@
 
 | # | Note | Question | Link | Difficulcty |
 |------|------|------|------|------|
-| 1 | MYSQL | row1 | row1 |row1 |
+| 1 | MYSQL | [r1c1](https://www.hackerrank.com/challenges/what-type-of-triangle/problem) | row1 |row1 |
 | 2 | MYSQL | row2 | row2 |row2 |
