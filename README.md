@@ -9,7 +9,8 @@
 | # | Note | Question | Link | Difficulcty |
 |------|------|------|------|------|
 | 1 | C++ Fibonacci style| [70. Climbing Stairs](https://leetcode.com/problems/climbing-stairs/description/?envType=study-plan-v2&envId=dynamic-programming) | [link](https://github.com/H-yz2022/Leetcode/blob/main/src/70.%20Climbing%20Stairs.cpp) | Easy |
-| 2 | C++ | row2 | [link]()  |row2 |
+| 2 | C++ | row2 | [509. Fibonacci Number](https://leetcode.com/problems/fibonacci-number/submissions/2019304064/?envType=study-plan-v2&envId=dynamic-programming)  |row2 |
+| 2 | C++ | row2 | []()  |row2 |
 
 ### Top Interview 150
 | # | Note | Question | Link | Difficulcty |
