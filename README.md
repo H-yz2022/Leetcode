@@ -2,7 +2,7 @@
 ### SQL
 | # | Note | Question | Link | Difficulcty |
 |------|------|------|------|------|
-| 1 | SQL | []() | [link]()  | Easy |
+| 1 | SQL | [SQL 50](https://leetcode.com/studyplan/top-sql-50/) | [link]()  | Easy |
 | 2 | SQL | []() | [link]()  | Easy 
 
 ### Dynamic Programming
