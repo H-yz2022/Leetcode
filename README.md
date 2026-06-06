@@ -1,3 +1,4 @@
+Display lists.
 # Leetcode
 ### SQL
 | # | Note | Question | Link | Difficulcty |
