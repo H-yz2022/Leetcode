@@ -3,7 +3,7 @@ Display lists.
 ### SQL
 | # | Note | Question | Link | Difficulcty |
 |------|------|------|------|------|
-| 1 | SQL | [SQL 50](https://leetcode.com/studyplan/top-sql-50/) | [link]()  | Easy |
+| 1 | SQL | [SQL 50](https://leetcode.com/studyplan/top-sql-50/) | [link](https://github.com/H-yz2022/Leetcode/blob/main/src/SQL50.sql)  | Medium - Hard |
 | 2 | SQL | []() | [link]()  | Easy 
 
 ### Dynamic Programming
