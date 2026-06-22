@@ -132,14 +132,51 @@ ORDER BY
     S.student_id, S.student_name, SU.subject_name
 ;
 
-# Basic Joins 8
+# Basic Joins 8 570. Managers with at Least 5 Direct Reports
+SELECT 
+    E1.name
+FROM 
+    Employee E1
+JOIN (
+    SELECT 
+        managerId,
+        COUNT(*) AS directReports
+    FROM 
+        Employee
+    GROUP BY 
+        managerId
+    HAVING COUNT(*) >= 5
+) E2 ON E1.id = E2.managerId;
+
+SELECT 
+    e.name
+FROM 
+    Employee AS e 
+INNER JOIN 
+    Employee AS m ON e.id=m.managerId 
+GROUP BY 
+    m.managerId 
+HAVING COUNT(m.managerId) >= 5
+
+# Basic Joins 9 1934. Confirmation Rate
+SELECT
+    s.user_id,
+    ROUND(
+        AVG(
+            IF(c.action = 'confirmed', 1.00, 0)
+        ), 
+        2
+    ) confirmation_rate
+FROM
+    Signups s
+LEFT JOIN
+    Confirmations c
+    ON
+    s.user_id = c.user_id
+GROUP BY
+    s.user_id
 
 
-
-# Basic Joins 9
-
-
-# Basic Joins 10
 
 
 
