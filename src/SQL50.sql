@@ -177,7 +177,57 @@ GROUP BY
     s.user_id
 
 
+# Basic Aggregate Functions 1
+    
+# Basic Aggregate Functions 2
 
+# Basic Aggregate Functions 3
+
+# Basic Aggregate Functions 4
+
+# Basic Aggregate Functions 5 1211. Queries Quality and Percentage
+
+# Basic Aggregate Functions 6  1193. Monthly Transactions I
+SELECT 
+    LEFT(trans_date, 7) AS month,
+    country, 
+    COUNT(id) AS trans_count,
+    SUM(state = 'approved') AS approved_count,
+    SUM(amount) AS trans_total_amount,
+    SUM((state = 'approved') * amount) AS approved_total_amount
+FROM 
+    Transactions
+GROUP BY 
+    month, country;
+
+# Basic Aggregate Functions 7 1174. Immediate Food Delivery II
+SELECT
+    round(avg(order_date = customer_pref_delivery_date)*100, 2) as immediate_percentage
+FROM 
+    Delivery
+WHERE 
+    (customer_id, order_date) IN (
+  SELECT 
+    customer_id, min(order_date) 
+  FROM 
+    Delivery
+  GROUP BY 
+    customer_id
+);
+
+# Basic Aggregate Functions 8 550. Game Play Analysis IV
+# Write your MySQL query statement below
+SELECT
+    ROUND(COUNT(DISTINCT player_id) / (SELECT COUNT(DISTINCT player_id) FROM Activity), 2) AS fraction
+FROM
+    Activity
+WHERE
+    (player_id, DATE_SUB(event_date, INTERVAL 1 DAY))
+  IN (
+    SELECT 
+        player_id, 
+        MIN(event_date) AS first_login FROM Activity GROUP BY player_id
+  )
 
 
 
