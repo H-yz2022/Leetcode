@@ -178,10 +178,40 @@ GROUP BY
 
 
 # Basic Aggregate Functions 1
+SELECT *
+FROM 
+    Cinema AS C
+WHERE 
+    C.description!="boring" AND C.id%2=1
+ORDER BY 
+    C.rating DESC;
     
-# Basic Aggregate Functions 2
+# Basic Aggregate Functions 2 1251. Average Selling Price
+SELECT 
+    P.product_id, 
+    IFNULL(ROUND(SUM(p.price * u.units) / SUM(u.units), 2), 0) AS average_price
+FROM 
+    Prices AS P
+LEFT JOIN 
+    UnitsSold AS U
+ON 
+    P.product_id=U.product_id 
+    AND u.purchase_date BETWEEN p.start_date AND p.end_date
+Group BY 
+    P.product_id;
 
 # Basic Aggregate Functions 3
+SELECT 
+    P.project_id, 
+    IFNULL(ROUND(SUM(experience_years) / COUNT(project_id), 2), 0) AS average_years
+FROM 
+    Project AS P
+LEFT JOIN 
+    Employee AS E
+ON 
+    P.employee_id =E.employee_id  
+Group BY 
+    P.project_id;
 
 # Basic Aggregate Functions 4 1633. Percentage of Users Attended a Contest
 SELECT DISTINCT
