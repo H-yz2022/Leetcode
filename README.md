@@ -22,7 +22,7 @@ Display lists.
 ### Top Interview 150
 | # | Note | Question | Link | Difficulcty |
 |------|------|------|------|------|
-| 1 | SQL | [8. Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/description/?envType=study-plan-v2&envId=top-interview-150) | [link]() | Easy |
+| 1 | SQL | [Array / String](https://leetcode.com/studyplan/top-interview-150/) | [link]() | Easy |
 | 2 | SQL | row2 | row2 |row2 |
 
 # HackerRank
