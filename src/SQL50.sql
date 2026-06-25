@@ -183,9 +183,34 @@ GROUP BY
 
 # Basic Aggregate Functions 3
 
-# Basic Aggregate Functions 4
+# Basic Aggregate Functions 4 1633. Percentage of Users Attended a Contest
+SELECT DISTINCT
+    contest_id,
+    ROUND(
+        (COUNT(contest_id) * 100) / (SELECT COUNT(*) FROM Users),
+        2
+    ) AS percentage
+FROM 
+    Register
+GROUP BY 
+    contest_id
+ORDER BY 
+    percentage DESC, 
+    contest_id ASC;
+
 
 # Basic Aggregate Functions 5 1211. Queries Quality and Percentage
+SELECT
+    query_name,
+    ROUND(SUM(rating / position) / COUNT(*), 2) AS quality,
+    ROUND(
+        SUM(CASE WHEN rating < 3 THEN 1 ELSE 0 END) * 100 / COUNT(*),
+        2
+    ) AS poor_query_percentage
+FROM 
+    Queries
+GROUP BY 
+    query_name;
 
 # Basic Aggregate Functions 6  1193. Monthly Transactions I
 SELECT 
