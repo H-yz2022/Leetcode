@@ -1,1 +1,0 @@
-#### Return the maximum number of points you can earn by applying the above operation some number of times.
