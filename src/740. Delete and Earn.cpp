@@ -1,5 +1,7 @@
 // Return the maximum number of points you can earn 
 // by applying the above operation some number of times.
+
+// this complexity is roughlyO(2*n)
 class Solution {
 public:
     int solve(vector<int> &arr, int i)
@@ -82,6 +84,8 @@ public:
     }
 };
 
+
+// Done in O(1).
 
 class Solution {
 public:
