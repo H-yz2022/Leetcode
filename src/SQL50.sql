@@ -285,6 +285,47 @@ WHERE
   )
 
 
+# Sorting and Grouping 1 2356. Number of Unique Subjects Taught by Each Teacher
+SELECT teacher_id, COUNT(distinct T.subject_id) AS cnt
+FROM Teacher AS T
+Group BY T.teacher_id 
+
+# Sorting and Grouping 2 1141. User Activity for the Past 30 Days I
+SELECT distinct activity_date AS day , COUNT(distinct user_id) AS active_users
+FROM Activity 
+WHERE (activity_date > "2019-06-27" AND activity_date <= "2019-07-27")
+GROUP BY activity_date;
+
+# Sorting and Grouping 3 1070. Product Sales Analysis III
+SELECT product_id, year as first_year, quantity, price 
+FROM sales 
+WHERE (product_id,year) 
+IN (SELECT product_id, min(year) 
+    FROM sales 
+    GROUP BY product_id);
+
+# Sorting and Grouping 4 596. Classes With at Least 5 Students
+SELECT Class
+FROM Courses 
+GROUP BY Class 
+HAVING count(student)>=5;
+
+# Sorting and Grouping 5 1729. Find Followers Count
+SELECT F.user_id, 
+COUNT(DISTINCT F.follower_id) AS followers_count
+FROM Followers AS F
+GROUP BY F.user_id ;
+
+# Sorting and Grouping 6
+
+
+# Sorting and Grouping 7
+
+
+# Advanced Select and Joins 1
+
+
+
 
 
 
