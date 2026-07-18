@@ -316,11 +316,22 @@ COUNT(DISTINCT F.follower_id) AS followers_count
 FROM Followers AS F
 GROUP BY F.user_id ;
 
-# Sorting and Grouping 6
+# Sorting and Grouping 6 619. Biggest Single Number
+SELECT MAX(num) AS num
+FROM (
+    SELECT num
+    FROM MyNumbers
+    GROUP BY num
+    HAVING COUNT(num) = 1
+) AS unique_numbers;
 
 
-# Sorting and Grouping 7
-
+# Sorting and Grouping 7 1045. Customers Who Bought All Products
+# Write your MySQL query statement below
+SELECT  customer_id 
+FROM Customer 
+GROUP BY customer_id
+HAVING COUNT(distinct product_key) = (SELECT COUNT(product_key) FROM Product)
 
 # Advanced Select and Joins 1
 
