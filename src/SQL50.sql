@@ -327,7 +327,6 @@ FROM (
 
 
 # Sorting and Grouping 7 1045. Customers Who Bought All Products
-# Write your MySQL query statement below
 SELECT  customer_id 
 FROM Customer 
 GROUP BY customer_id
@@ -339,6 +338,17 @@ FROM Employees AS e1
 JOIN Employees AS e2
 ON e1.reports_to = e2.employee_id
 
+# Advanced Select and Joins 2
+
+# Advanced Select and Joins 3
+
+# Advanced Select and Joins 4
+
+# Advanced Select and Joins 5
+
+# Advanced Select and Joins 6
+
+# Advanced Select and Joins 7
 
 
 
