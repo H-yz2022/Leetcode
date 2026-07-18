@@ -333,8 +333,11 @@ FROM Customer
 GROUP BY customer_id
 HAVING COUNT(distinct product_key) = (SELECT COUNT(product_key) FROM Product)
 
-# Advanced Select and Joins 1
-
+# Advanced Select and Joins 1 1731. The Number of Employees Which Report to Each Employee
+SELECT DISTINCT e2.employee_id, e2.name, COUNT(e1.employee_id)AS reports_count, round(avg(e1.age))AS average_age
+FROM Employees AS e1
+JOIN Employees AS e2
+ON e1.reports_to = e2.employee_id
 
 
 
