@@ -327,21 +327,30 @@ FROM (
 
 
 # Sorting and Grouping 7 1045. Customers Who Bought All Products
-SELECT  customer_id 
-FROM Customer 
-GROUP BY customer_id
+SELECT  
+    customer_id 
+FROM 
+    Customer 
+GROUP BY 
+    customer_id
 HAVING COUNT(distinct product_key) = (SELECT COUNT(product_key) FROM Product)
 
 # Advanced Select and Joins 1 1731. The Number of Employees Which Report to Each Employee
 SELECT DISTINCT e2.employee_id, e2.name, COUNT(e1.employee_id)AS reports_count, round(avg(e1.age))AS average_age
-FROM Employees AS e1
-JOIN Employees AS e2
-ON e1.reports_to = e2.employee_id
+FROM 
+    Employees AS e1
+JOIN 
+    Employees AS e2
+ON 
+    e1.reports_to = e2.employee_id
 
 # Advanced Select and Joins 2 1789. Primary Department for Each Employee
-SELECT employee_id, department_id
-FROM Employee
-WHERE primary_flag='Y' OR 
+SELECT 
+    employee_id, department_id
+FROM 
+    Employee
+WHERE 
+    primary_flag='Y' OR 
     employee_id in
     (SELECT employee_id
     FROM Employee
@@ -349,17 +358,82 @@ WHERE primary_flag='Y' OR
     HAVING COUNT(employee_id)=1)    
 
 # Advanced Select and Joins 3 610. Triangle Judgement
-SELECT *, if(x+y>z and y+z>x and x+z>y, "Yes","No") as triangle 
-FROM triangle
+SELECT 
+    *, if(x+y>z and y+z>x and x+z>y, "Yes","No") as triangle 
+FROM 
+    triangle
 
-# Advanced Select and Joins 4
+# Advanced Select and Joins 4 180. Consecutive Numbers
+SELECT DISTINCT l1.num AS ConsecutiveNums
+FROM Logs l1
+JOIN Logs l2
+    ON l1.id = l2.id - 1
+JOIN Logs l3
+    ON l2.id = l3.id - 1
+WHERE l1.num = l2.num
+  AND l2.num = l3.num;
+    
+# Advanced Select and Joins 5 1164. Product Price at a Given Date
+SELECT 
+    p.product_id
+    ,COALESCE((
+        SELECT pr.new_price
+        FROM products pr
+        WHERE p.product_id=pr.product_id
+            AND pr.change_date<='2019-08-16'
+        ORDER BY pr.change_date DESC LIMIT 1
+    ),10) AS price
+FROM (
+    SELECT DISTINCT product_id
+    FROM products 
+) AS p
 
-# Advanced Select and Joins 5
+# Advanced Select and Joins 6 1204. Last Person to Fit in the Bus
+WITH new_table AS (
+    SELECT 
+        person_name,
+        SUM(weight) OVER (ORDER BY turn) AS cumulative_weight
+    FROM Queue
+)
+SELECT 
+    person_name
+FROM new_table
+WHERE cumulative_weight <= 1000
+ORDER BY cumulative_weight DESC
+LIMIT 1;
 
-# Advanced Select and Joins 6
+SELECT person_name
+FROM
+(
+    SELECT
+        person_name,
+        turn,
+        SUM(weight) OVER (ORDER BY turn) AS total_weight
+    FROM Queue
+) q
+WHERE total_weight <= 1000
+ORDER BY total_weight DESC
+LIMIT 1;
+    
+# Advanced Select and Joins 7 1907. Count Salary Categories
+SELECT
+    'Low Salary' As category
+    ,COUNT(CASE WHEN income<20000 THEN 1 END) AS accounts_count
+FROM accounts
 
-# Advanced Select and Joins 7
+UNION ALL
 
+SELECT
+    'Average Salary' AS category
+    ,COUNT(CASE WHEN income BETWEEN 20000 AND 50000 THEN 1 END) AS accounts_count
+FROM accounts
+
+UNION ALL
+
+SELECT 
+    'High Salary' AS category
+    ,COUNT(CASE WHEN income>50000 THEN 1 END) AS accounts_count
+FROM accounts
 
 
 
