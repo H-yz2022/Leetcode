@@ -338,9 +338,19 @@ FROM Employees AS e1
 JOIN Employees AS e2
 ON e1.reports_to = e2.employee_id
 
-# Advanced Select and Joins 2
+# Advanced Select and Joins 2 1789. Primary Department for Each Employee
+SELECT employee_id, department_id
+FROM Employee
+WHERE primary_flag='Y' OR 
+    employee_id in
+    (SELECT employee_id
+    FROM Employee
+    Group BY employee_id
+    HAVING COUNT(employee_id)=1)    
 
-# Advanced Select and Joins 3
+# Advanced Select and Joins 3 610. Triangle Judgement
+SELECT *, if(x+y>z and y+z>x and x+z>y, "Yes","No") as triangle 
+FROM triangle
 
 # Advanced Select and Joins 4
 
