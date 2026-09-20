@@ -20,6 +20,23 @@ public:
 //key value: element + index 
 // find the deduct value in the table instead of looking all the possible sum
 //O(1)
+/*
+func(nums, target)->[i]:
+   result=[]
+   map =HashTable()
+   for i in [0, ken(nums)):
+       map.add(nums[i].i)
+   for j in [0, ken(nums)):
+       diff = target - nums[j]      
+       if (map.containskey(diff) add
+           map.get(diff) !=j)
+           result[0] = j
+           result[1] = mao.get (diff)
+           return result
+return result
+
+
+    */
 class Solution {
 public:
     vector<int> twoSum(vector<int>& nums, int target) {
