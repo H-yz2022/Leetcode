@@ -1,5 +1,6 @@
 //straight=forward
-// one pointer -->return the index
+// one pointer -->return the index 
+//O(N)
 class Solution {
 public:
     vector<int> twoSum(vector<int>& nums, int target) {
@@ -16,6 +17,9 @@ public:
 };
 
 //hash table
+//key value: element + index 
+// find the deduct value in the table instead of looking all the possible sum
+//O(1)
 class Solution {
 public:
     vector<int> twoSum(vector<int>& nums, int target) {
