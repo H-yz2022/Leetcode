@@ -15,7 +15,7 @@ Display lists.
 | 4 | C++ |  [746. Min Cost Climbing Stairs](https://leetcode.com/problems/min-cost-climbing-stairs/description/?envType=study-plan-v2&envId=dynamic-programming) | [Link]()  | Easy |
 | 5 | C++ |  [198. House Robber](https://leetcode.com/problems/house-robber/description/?envType=study-plan-v2&envId=dynamic-programming) | [Link]()  | Medium |
 | 5 | C++ |  [1. Two Sum](https://leetcode.com/problems/two-sum/) | [Link]()  | Easy |
-| 5 | C++ |  []() | [Link]()  | Easy |
+| 5 | C++ |  []() | [2. Add Two Numbers](https://leetcode.com/problems/add-two-numbers/description/)  | Medium |
 | 5 | C++ |  []() | [Link]()  | Easy |
 | 5 | C++ |  []() | [Link]()  | Easy |
 
