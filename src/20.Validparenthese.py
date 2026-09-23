@@ -1,4 +1,8 @@
 class Solution:
+  #Stack
+  #N is the size of s
+  #Time Complexity: O(N)
+  #Space Complexity: O(N)
   def isValid(self, s: str) -> bool:
     if len(s) == 0:
       return True
