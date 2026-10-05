@@ -7,8 +7,8 @@ class Solution:
     if nums is None or len(nums) == 0:
       return 0
     l, r == 0, len(nums) -1
-    while l < r:
-      while (l < r and nums[l] != val):
+    while l < r://already done
+      while (l < r and nums[l] != val)://指针跳出
         l += 1
       while (l < r and nums[l] == val):
         r -= 1
